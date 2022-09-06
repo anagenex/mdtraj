@@ -10,14 +10,12 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-20.04, macos-11, windows-2019]
+        os: [ubuntu-20.04, macos-11]
     steps:
       - uses: actions/checkout@v3
 
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.9.0
-        env:
-          CIBW_BEFORE_ALL_WINDOWS: choco install zlib --version 1.2.7.14 --source https://www.myget.org/F/coapp/api/v2
 
       - uses: actions/upload-artifact@v3
         with:
