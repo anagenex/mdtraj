@@ -29,7 +29,7 @@ except ValueError:
 
 
 ##########################
-VERSION = "1.9.8.dev0"  # please keep this in-sync with default.nix
+VERSION = "1.9.8.dev0"
 ISRELEASED = False
 __version__ = VERSION
 ##########################
@@ -247,7 +247,10 @@ def geometry_extensions():
 write_version_py(VERSION, ISRELEASED, 'mdtraj/version.py')
 
 metadata = \
-    dict(name='mdtraj',
+    dict(name='anagenex-mdtraj',
+      maintainer='In-Ho Yi',
+      maintainer_email='in-ho@anagenex.com',
+      provides=['mdtraj'],
       author='Robert McGibbon',
       author_email='rmcgibbo@gmail.com',
       description=DOCLINES[0],
