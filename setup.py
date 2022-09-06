@@ -29,7 +29,7 @@ except ValueError:
 
 
 ##########################
-VERSION = "1.9.8.dev0"  # please keep this in-sync with default.nix
+VERSION = "1.9.8.dev0"
 ISRELEASED = False
 __version__ = VERSION
 ##########################
